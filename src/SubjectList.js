@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function SubjectList(props){
-    const subjectlist = props.list;
+    const subjectlist = props.data;
     const [subjects, setSubjects] = useState(subjectlist);
     
     function addSubject() {
@@ -17,7 +17,7 @@ export default function SubjectList(props){
         <ol>
             {
             subjects?.map((subject)=>{
-                return <li>{subject.code} - {subject.desc}</li>
+                return <li>{subject.code} - {subject.description}</li>
             })
             }
         </ol>
